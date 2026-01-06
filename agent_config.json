@@ -1,0 +1,65 @@
+{
+  "agent": {
+    "name": "Solana Super Agent",
+    "version": "2.0.0",
+    "description": "Enhanced Solana Agent with multiple capabilities"
+  },
+  "wallet": {
+    "address": "auto_generated",
+    "network": "mainnet"
+  },
+  "rpc": {
+    "url": "https://api.mainnet-beta.solana.com",
+    "fallback_urls": [
+      "https://solana-api.projectserum.com",
+      "https://rpc.ankr.com/solana"
+    ]
+  },
+  "plugins": {
+    "enabled": [
+      "token",
+      "nft",
+      "defi",
+      "vault",
+      "blinks",
+      "mcp",
+      "market",
+      "security",
+      "trading_bot"
+    ],
+    "token": {
+      "pump_fun_api": "https://pump.fun",
+      "pump_portal_api": "https://pumpportal.fun",
+      "default_slippage": 10.0,
+      "default_priority_fee": 0.0005
+    },
+    "vault": {
+      "gold_vault_seed": "2eeb25e9f22b46bb932a4f0a88510f11",
+      "min_balance": 1.0
+    }
+  },
+  "mcp_servers": [
+    {
+      "transport": "http",
+      "endpoint": "https://mcp.solana.com/mcp",
+      "enabled": true
+    }
+  ],
+  "security": {
+    "enable_ip_check": true,
+    "allowed_ips": ["159.138.132.216"],
+    "require_api_key": true,
+    "encrypt_secrets": true
+  },
+  "automation": {
+    "auto_monitor": true,
+    "monitor_interval": 60,
+    "auto_backup": true,
+    "backup_interval": 3600
+  },
+  "api_keys": {
+    "pump_portal": "your-api-key-here",
+    "openai": "your-openai-key-here",
+    "helius": "your-helius-key-here"
+  }
+}
